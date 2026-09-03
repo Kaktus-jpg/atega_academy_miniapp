@@ -3,81 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#6f2630">
-  <title>Академия АТЕГА — курсы</title>
+  <meta name="theme-color" content="#102820">
+  <title>Академия Бизнеса</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="app">
     <header class="topbar">
       <div class="brand-mark">А</div>
-      <div class="brand">
-        <b>Академия АТЕГА</b>
-        <span>Бизнес-образование</span>
-      </div>
+      <div class="brand"><b>Академия Бизнеса</b><span>Обучение для новых идей</span></div>
     </header>
 
     <section id="home" class="screen active home">
-      <p class="eyebrow">Образовательные программы</p>
-      <h1>Курсы для уверенного старта в бизнесе</h1>
-      <label class="search" aria-label="Поиск курса">
-        <span aria-hidden="true">⌕</span>
-        <input id="search" placeholder="Поиск курсов" autocomplete="off">
-      </label>
-      <div class="section-label">Направления</div>
-      <button class="category" id="open-category">
-        <strong>Бизнес</strong>
-        <span class="arrow" aria-hidden="true">›</span>
+      <div class="hero">
+        <span class="eyebrow">АКАДЕМИЯ БИЗНЕСА</span>
+        <h1>Постройте<br>свой следующий шаг</h1>
+        <p>Практические программы, которые помогают превратить идею в понятный план действий.</p>
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><span class="hero-dot">✦</span>
+      </div>
+      <div class="menu-heading"><div><span>Главное меню</span><h2>С чего начнём?</h2></div><span class="menu-number">01</span></div>
+      <button class="menu-card" id="open-directions">
+        <span class="card-icon">↗</span><span class="card-copy"><b>Доступные направления</b><small>Выберите область обучения</small></span><span class="arrow">›</span>
       </button>
     </section>
 
-    <section id="catalog" class="screen course-wrap">
-      <button class="back" data-back="home">‹&nbsp; Назад</button>
-      <div class="section-label catalog-title">Бизнес · 1 программа</div>
-      <article class="course-card">
-        <div class="course-art" aria-label="Иллюстрация развития бизнеса">
-          <svg viewBox="0 0 600 300" role="img" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#f5dde0"/><stop offset="1" stop-color="#e9c6ca"/></linearGradient>
-              <linearGradient id="card" x1="0" x2="1"><stop stop-color="#722630"/><stop offset="1" stop-color="#aa4b55"/></linearGradient>
-            </defs>
-            <rect width="600" height="300" fill="url(#bg)"/>
-            <path d="M0 238C118 191 198 307 328 241S500 195 600 239V300H0Z" fill="#fff" opacity=".65"/>
-            <circle cx="106" cy="70" r="34" fill="#d9a52a"/><circle cx="504" cy="72" r="20" fill="#718c80"/>
-            <path d="M470 112l13 26 29 4-21 20 5 29-26-14-27 14 6-29-22-20 30-4z" fill="#9d3540"/>
-            <rect x="151" y="98" width="290" height="155" rx="16" fill="#263039" transform="rotate(-7 296 175)"/>
-            <rect x="164" y="106" width="270" height="133" rx="10" fill="url(#card)" transform="rotate(-7 299 173)"/>
-            <path d="M205 184l39-34 30 26 52-55 59 61" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="205" cy="184" r="8" fill="#e9c34d"/><circle cx="326" cy="121" r="8" fill="#e9c34d"/>
-            <rect x="245" y="76" width="99" height="37" rx="18" fill="#fff"/>
-            <text x="294" y="100" text-anchor="middle" font-size="18" font-family="Arial" font-weight="700" fill="#722630">АТЕГА</text>
-          </svg>
-        </div>
-        <div class="course-content">
-          <div class="tag">Курс</div>
-          <h2>Старт бизнеса с нуля</h2>
-          <div class="price">15 000 ₽ <small>за курс</small></div>
-        </div>
-        <div class="details">
-          <p><b>Ближайшая дата начала занятий</b>15 сентября 2026</p>
-          <p><b>Продолжительность обучения</b>2 месяца</p>
-          <p><b>Тип</b>Курс</p>
-          <p><b>Уровень сложности</b>Для новичков</p>
-          <p><b>Полная стоимость курса</b>15 000 руб.</p>
-          <p><b>Рассрочка</b>2 платежа по 7 500 руб./мес.</p>
-          <p><b>Описание</b>Практический курс для тех, кто хочет превратить идею в работающий бизнес. Вы определите целевую аудиторию, соберёте простую финансовую модель, разберётесь с продвижением и подготовите понятный план запуска своего первого проекта.</p>
-        </div>
-      </article>
+    <section id="directions" class="screen page">
+      <button class="back" data-back="home">←&nbsp; Главное меню</button>
+      <span class="eyebrow dark">ШАГ 1 ИЗ 3</span><h1>Доступные<br>направления</h1>
+      <p class="lead">Начните с направления, которое соответствует вашей цели.</p>
+      <button class="direction-card" id="open-courses">
+        <div class="direction-art"><span>↗</span><i></i><i></i></div>
+        <div><span class="course-label">НАПРАВЛЕНИЕ</span><h2>Бизнес</h2><p>Запуск, управление и развитие своего дела</p></div><span class="arrow">›</span>
+      </button>
+    </section>
+
+    <section id="courses" class="screen page">
+      <button class="back" data-back="directions">←&nbsp; Направления</button>
+      <span class="eyebrow dark">ШАГ 2 ИЗ 3</span><h1>Курсы<br>по бизнесу</h1>
+      <p class="lead">Сейчас доступна одна программа для уверенного старта.</p>
+      <button class="course-preview" id="open-course">
+        <div class="course-preview-art"><span>01</span><div class="chart"><i></i><i></i><i></i></div></div>
+        <div class="preview-content"><span class="course-label">КУРС · ДЛЯ НОВИЧКОВ</span><h2>Старт бизнеса с нуля</h2><p>2 месяца обучения</p><strong>15 000 ₽ <small>за курс</small></strong></div>
+        <span class="preview-link">Подробнее <b>→</b></span>
+      </button>
+    </section>
+
+    <section id="course" class="screen page course-page">
+      <button class="back" data-back="courses">←&nbsp; Доступные курсы</button>
+      <div class="course-cover"><span class="cover-kicker">BUSINESS / 01</span><div class="cover-title">Идея<br><em>в дело</em></div><div class="cover-grid"></div><span class="cover-arrow">↗</span></div>
+      <span class="eyebrow dark">ШАГ 3 ИЗ 3 · КУРС</span><h1>Старт бизнеса<br>с нуля</h1>
+      <div class="main-price">15 000 ₽ <span>полная стоимость</span></div>
+      <div class="facts">
+        <div><b>Ближайший старт</b><span>15 сентября 2026</span></div>
+        <div><b>Длительность</b><span>2 месяца</span></div>
+        <div><b>Уровень</b><span>Для новичков</span></div>
+        <div><b>Рассрочка</b><span>7 500 руб./мес.</span></div>
+      </div>
+      <article class="description"><h2>Что будет на курсе</h2><p>Практический курс для тех, кто хочет превратить идею в работающий бизнес. Вы определите целевую аудиторию, соберёте простую финансовую модель, разберётесь с продвижением и подготовите понятный план запуска своего первого проекта.</p></article>
     </section>
   </main>
 
-  <div class="bottom">
-    <div class="bottom-inner">
-      <button id="choose" class="primary hidden">Выбрать</button>
-    </div>
-  </div>
+  <div class="bottom"><div class="bottom-inner"><button id="choose" class="primary hidden">Выбрать курс</button></div></div>
   <div id="toast" class="toast" role="status"></div>
-
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script src="app.js"></script>
 </body>
