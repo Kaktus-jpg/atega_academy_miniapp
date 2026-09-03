@@ -1,5 +1,5 @@
 // Перед публикацией замените значение на username своего Telegram-бота без символа @.
-const BOT_USERNAME = 'YOUR_BOT_USERNAME';
+const BOT_USERNAME = 'AtegaAcademy_bot';
 
 const course = {
   action: 'course_selected',
