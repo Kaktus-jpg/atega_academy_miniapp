@@ -27,7 +27,7 @@ function show(screenId) {
   });
 
   $(`#${screenId}`).classList.add('active');
-  $('#choose').classList.toggle('hidden', screenId !== 'catalog');
+  $('#choose').classList.toggle('hidden', screenId !== 'course');
   window.scrollTo(0, 0);
 }
 
@@ -38,27 +38,26 @@ function toast(text) {
   setTimeout(() => element.classList.remove('show'), 2800);
 }
 
-$('#open-category').addEventListener('click', () => show('catalog'));
+$('#open-directions').addEventListener('click', () => show('directions'));
+$('#open-courses').addEventListener('click', () => show('courses'));
+$('#open-course').addEventListener('click', () => show('course'));
 
 document.querySelectorAll('[data-back]').forEach((button) => {
   button.addEventListener('click', () => show(button.dataset.back));
 });
 
-$('#search').addEventListener('input', (event) => {
-  const value = event.target.value.trim().toLowerCase();
-
-  if (value && !'бизнес старт бизнеса с нуля'.includes(value)) {
-    toast('В каталоге пока доступен один курс: «Старт бизнеса с нуля».');
-  }
-});
-
 $('#choose').addEventListener('click', () => {
   if (!tg) {
-    toast('Откройте Mini App из кнопки в Telegram-боте, чтобы выбрать курс.');
+    toast('Откройте Mini App через кнопку в Telegram-боте.');
     return;
   }
 
-  // sendData доступен для Mini App, открытого reply-кнопкой KeyboardButton с web_app.
-  // Telegram отправит строку в message.web_app_data.data и автоматически закроет приложение.
-  tg.sendData(JSON.stringify(course));
+  try {
+    // ВАЖНО: sendData работает только для Web App, открытого из ReplyKeyboardMarkup / KeyboardButton.
+    // Telegram сам закроет приложение и вернёт пользователя в чат с ботом.
+    tg.sendData(JSON.stringify(course));
+  } catch (error) {
+    console.error(error);
+    toast('Не удалось отправить заявку. Откройте приложение кнопкой клавиатуры бота.');
+  }
 });
