@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#8c3145">
-  <title>Академия АТЕГА — курсы</title>
+  <title>Академия АТЕГА — маркетплейсы</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="app">
     <header class="topbar">
       <div class="brand-mark">А</div>
-      <div class="brand"><b>Академия АТЕГА</b><span>Обучение для новых идей</span></div>
+      <div class="brand"><b>Академия АТЕГА</b><span>Онлайн-обучение для карьеры</span></div>
     </header>
 
     <section id="home" class="screen active home">
       <div class="hero">
         <span class="eyebrow">АКАДЕМИЯ АТЕГА</span>
-        <h1>Освойте профессию<br>в e-commerce</h1>
-        <p>Практическое обучение для будущих менеджеров маркетплейсов.</p>
+        <h1>Освойте профессию<br>в электронной торговле</h1>
+        <p>Выберите программу и начните путь к первым продажам на маркетплейсах.</p>
         <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><span class="hero-dot">✦</span>
       </div>
       <div class="menu-heading"><div><span>Главное меню</span><h2>С чего начнём?</h2></div><span class="menu-number">01</span></div>
@@ -28,39 +28,36 @@
     <section id="directions" class="screen page">
       <button class="back" data-back="home">←&nbsp; Главное меню</button>
       <span class="eyebrow dark">ШАГ 1 ИЗ 3</span><h1>Доступные<br>направления</h1>
-      <p class="lead">Выберите направление, в котором хотите развиваться.</p>
-      <button class="direction-card" id="open-courses"><div class="direction-art"><span>↗</span><i></i><i></i></div><div><span class="course-label">НАПРАВЛЕНИЕ</span><h2>Маркетинг</h2><p>Продвижение, продажи и работа с маркетплейсами</p></div><span class="arrow">›</span></button>
+      <p class="lead">Начните с направления, которое соответствует вашей цели.</p>
+      <button class="direction-card" id="open-courses">
+        <div class="direction-art"><span>↗</span><i></i><i></i></div>
+        <div><span class="course-label">НАПРАВЛЕНИЕ</span><h2>Маркетплейсы</h2><p>Продажи, аналитика и развитие онлайн-магазинов</p></div><span class="arrow">›</span>
+      </button>
     </section>
 
     <section id="courses" class="screen page">
       <button class="back" data-back="directions">←&nbsp; Направления</button>
-      <span class="eyebrow dark">ШАГ 2 ИЗ 3</span><h1>Менеджер<br>маркетплейсов</h1>
-      <p class="lead">Выберите подходящий темп обучения. Все программы проходят полностью дистанционно.</p>
-
-      <button class="course-preview course-option" data-option="intensive">
-        <div class="course-preview-art"><span>01</span><div class="chart"><i></i><i></i><i></i></div></div>
-        <div class="preview-content"><span class="course-label">ИНТЕНСИВ · ДЛЯ НОВИЧКОВ</span><h2>Быстрый старт</h2><p>2 недели · 20 академических часов</p><strong>15 000 ₽ <small>за курс</small></strong></div>
-        <span class="preview-link">Выбрать вариант <b>→</b></span>
-      </button>
-
-      <button class="course-preview course-option" data-option="basic">
-        <div class="course-preview-art option-art"><span>02</span><div class="chart"><i></i><i></i><i></i></div></div>
-        <div class="preview-content"><span class="course-label">БАЗОВЫЙ КУРС · ДЛЯ НОВИЧКОВ</span><h2>Практика для старта</h2><p>4 недели · 35 академических часов</p><strong>25 000 ₽ <small>за курс</small></strong></div>
-        <span class="preview-link">Выбрать вариант <b>→</b></span>
-      </button>
+      <span class="eyebrow dark">ШАГ 2 ИЗ 3</span><h1>Выберите<br>формат обучения</h1>
+      <p class="lead">Все программы проходят полностью дистанционно. Выберите глубину погружения.</p>
+      <div id="course-list" class="course-list"></div>
     </section>
 
     <section id="course" class="screen page course-page">
-      <button class="back" data-back="courses">←&nbsp; Варианты обучения</button>
-      <div class="course-cover"><span class="cover-kicker">MARKETPLACE / <span id="cover-number">01</span></span><div class="cover-title">От карточки<br><em>к продажам</em></div><div class="cover-grid"></div><span class="cover-arrow">↗</span></div>
-      <span class="eyebrow dark">ШАГ 3 ИЗ 3 · <span id="detail-format">ИНТЕНСИВ</span></span>
-      <h1>Менеджер маркетплейсов: с нуля до первых продаж</h1>
-      <div class="main-price"><span id="detail-price">15 000 ₽</span> <span>полная стоимость</span></div>
-      <div class="facts"><div><b>Формат</b><span>Полностью дистанционный</span></div><div><b>Длительность</b><span id="detail-duration">2 недели</span></div><div><b>Объём</b><span id="detail-hours">20 академических часов</span></div><div><b>Уровень</b><span>Для новичков</span></div></div>
-      <article class="description"><h2>Что будет на курсе</h2><p id="detail-description"></p></article>
+      <button class="back" data-back="courses">←&nbsp; Все форматы</button>
+      <div class="course-cover"><span class="cover-kicker" id="cover-kicker">MARKETPLACE / 01</span><div class="cover-title">Продажи<br><em>онлайн</em></div><div class="cover-grid"></div><span class="cover-arrow">↗</span></div>
+      <span class="eyebrow dark">ШАГ 3 ИЗ 3 · ПРОГРАММА</span><h1 id="course-title">Менеджер маркетплейсов</h1>
+      <div class="main-price" id="course-price">15 000 ₽ <span>полная стоимость</span></div>
+      <div class="facts">
+        <div><b>Формат</b><span>Полностью дистанционный</span></div>
+        <div><b>Длительность</b><span id="course-duration">2 недели</span></div>
+        <div><b>Объём программы</b><span id="course-hours">20 академических часов</span></div>
+        <div><b>Уровень</b><span>Для новичков</span></div>
+      </div>
+      <article class="description"><h2>О программе</h2><p id="course-description"></p></article>
     </section>
   </main>
-  <div class="bottom"><div class="bottom-inner"><button id="choose" class="primary hidden">Выбрать курс</button></div></div>
+
+  <div class="bottom"><div class="bottom-inner"><button id="choose" class="primary hidden">Выбрать программу</button></div></div>
   <div id="toast" class="toast" role="status"></div>
   <script src="https://telegram.org/js/telegram-web-app.js?61"></script>
   <script src="app.js"></script>
